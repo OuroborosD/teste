@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0r@&!4yt$a4!px#^0@jf#n^5+yy#c6*yluw4w$)5#7)+8twbv&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['159.203.182.74', 'localhost']
 
 
 # Application definition
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'base.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fusion',
-        'USER': 'Oroboros',
-        'PASSWORD': 'Exc4libur!',
+        'NAME': 'teste',
+        'USER': 'teste',
+        'PASSWORD': 'teste!',
         'HOST':'localhost',
         'PORT': '5432'
     }
