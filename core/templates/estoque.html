@@ -1,0 +1,58 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTATO</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    <div  class="container">
+        <a href="{% url 'index' %}" class="btn btn-outline-primary" role="button" aria-pressed="true">Pagina inicial</a>
+        <a href="{% url 'produto' %}" class="btn btn-outline-success" role="button" aria-pressed="true">Adcionar Produto</a>
+        <h1>Estoque</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                          <th scope = "col"> # </th>
+                          <th scope = "col"> nome </th>
+                          <th scope = "col"> precificado </th>
+                          <th scope = "col"> valor</th>
+                          <th scope = "col">estoque</th>
+                          <th scope = "col"> peso </th>
+                          <th scope = "col"> volume </th>
+                          <th scope = "col"> quantidade </th>
+                          <th scope = "col"> validade </th>
+                          <th scope = "col"> lote </th>
+                          <th scope = "col"> tag </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for i in produto_estoque %}
+                            <tr>
+                                <td scope="row">{{i.id}}</td>
+                                 <td scope="row">{{i.nome}}</td>
+                                 <td scope="row">{{i.escolha}}</td>
+                                 <td scope="row">{{i.valor}}</td>
+                                 <td scope="row">{{i.quantidade}}</td>
+                                 <td scope="row">{{i.peso}}</td>
+                                 <td scope="row">{{i.volume}}</td>
+                                 <td scope="row">{{i.quantidade}}</td>
+                                 <td scope="row">{{i.validade}}</td>
+                                 <td scope="row">{{i.lote}}</td>
+                                 <td scope="row">{{i.tag}}</td>
+
+
+                            </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+
+    </div>
+{% bootstrap_javascript jquery='full' %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    <div  class="container">
+
+        <h1>INDEX</h1>
+         <a href="{% url 'index' %}" class="btn btn-outline-primary" role="button" aria-pressed="true">Pagina inicial</a>
+         <a href="{% url 'estoque' %}" class="btn btn-outline-success" role="button" aria-pressed="true">Estoque</a>
+         <a href="{% url 'contato' %}" class="btn btn-light" role="button" aria-pressed="true">contato</a>
+         <a href="{% url 'produto' %}" class="btn btn-info" role="button" aria-pressed="true">produto</a>
+        {% bootstrap_messages %}
+
+    </div>
+{% bootstrap_javascript jquery='full' %}
+
+</body>
+</html>

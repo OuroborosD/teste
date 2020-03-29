@@ -1,0 +1,26 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produto</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    <div  class="container">
+        <a href="{% url 'index' %}" class="btn btn-outline-primary" role="button" aria-pressed="true">Pagina inicial</a>
+        <a href="{% url 'estoque' %}" class="btn btn-outline-success" role="button" aria-pressed="true">Estoque</a>
+        <h1>Produto</h1>
+        {% bootstrap_messages %}
+        <form action ="{% url 'produto' %}" method="post" class="form" autocomplete="off">
+            {% csrf_token %}
+            {% bootstrap_form produto %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">salvar produto</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% bootstrap_javascript jquery='full' %}
+
+</body>
+</html>
